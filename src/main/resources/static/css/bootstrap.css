@@ -19,14 +19,14 @@ html {
 }
 body {
   margin: 0;
-  background: #ffffff url('https://wallpaperbrowse.com/media/images/background-7.jpg');
+  /*background: #ffffff url('https://wallpaperbrowse.com/media/images/background-7.jpg');*/
+  background-image: url(../img/background-7.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-clip: border-box;
   background-origin: padding-box;
   background-position-x: 0%;
   background-position-y: 0%;
-
 
 }
 article,
@@ -7702,7 +7702,7 @@ input[type="checkbox"]:disabled:checked:after,
 
 .containerincenter
 {
-  padding-top: 10%;
+  padding-top: 3%;
 }
 
 .textincenter
