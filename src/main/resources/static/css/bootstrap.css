@@ -7705,6 +7705,11 @@ input[type="checkbox"]:disabled:checked:after,
   padding-top: 3%;
 }
 
+.containerforindex
+{
+  padding-top: 10%;
+}
+
 .textincenter
 {
   padding-top: 100px;

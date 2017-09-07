@@ -55,7 +55,7 @@
                         <label for="password" class="col-lg-4 control-label">Password</label>
                         <mark><strong><span th:if="${#fields.hasErrors('password')}" th:error="*{password}">Password Error</span></strong></mark>
                         <div class="col-lg-4">
-                            <input class="form-control" type="text" id="password" placeholder="Password" th:field="*{password}" /><br/>
+                            <input class="form-control" type="password" id="password" placeholder="Password" th:field="*{password}" /><br/>
                         </div>
                     </div>
 
