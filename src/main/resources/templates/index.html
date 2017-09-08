@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8"/>
     <title>Index</title>
@@ -19,7 +19,11 @@
             <br/>
             <a href="/welcome" class="btn btn-primary">Log in to enter</a>
             <br/><br/><br/><br/>
+            <p><a href="/addroles" class="btn btn-link">Add roles</a></p>
             <p><a href="/register" class="btn btn-link">Register new account</a></p>
+            <p><a href="/registeradmin" class="btn btn-link">Register new admin account</a></p>
+
+            <div sec:authorize="isAuthenticated()">This content is only shown to authenticated users.</div>
 
         </div>
     </div>

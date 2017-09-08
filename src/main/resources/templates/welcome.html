@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <title>Welcome</title>
@@ -21,6 +21,21 @@
             <h1>Welcome!</h1>
             <h3>You have logged in</h3>
             <br/>
+
+            <div sec:authorize="isAuthenticated()">
+                This content is only shown to authenticated users.
+            </div>
+            <div sec:authorize="hasAuthority('ADMIN')">
+                This content is only shown to administrators.
+            </div>
+            <div sec:authorize="hasAuthority('ROLE_USER')">
+                This content is only shown to users.
+            </div>
+
+            Logged user: <span sec:authentication="name">The user is not logged in yet</span>
+            <!--Roles: <span sec:authentication="principal.authorities">Principal Authorities not set</span>-->
+
+            <div sec:authorize="hasAuthority('USER')">Has Authority USER</div>
 
             <a href="/logout" class="btn btn-primary">Logout</a>
         </div>
